@@ -6,6 +6,8 @@
   import 'leaflet.markercluster/dist/MarkerCluster.css';
   import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
 
+  const API_URL = 'https://mapas.curvelo.mg.gov.br';
+
   const layerGroups = [
     { 
       'name': 'Cadastro',
@@ -31,7 +33,7 @@
       id: 'layer8',
       name: 'Macrozoneamento',
       type: 'polygon',
-      url: 'https://curvelo.vaz.io/dataset/716c0bf0-6b54-4b8a-b07f-79985cf672e6/resource/d6609383-4485-4a3d-8ba5-a9cde647e02c/download/macrozoneamento.geojson',
+      url: API_URL + '/dataset/716c0bf0-6b54-4b8a-b07f-79985cf672e6/resource/d6609383-4485-4a3d-8ba5-a9cde647e02c/download/macrozoneamento.geojson',
       style: {
          fillColor: 'rgba(200, 200, 0, 0.2)',
          color: '#AAAA00',
@@ -43,7 +45,7 @@
       id: 'layer3',
       name: 'Perímetro Rural',
       type: 'polygon',
-      url: 'https://curvelo.vaz.io/dataset/31bbb8a5-eaad-4952-802f-267d898224f0/resource/ab706115-d919-4323-bc96-8f39632d2ad1/download/perimetro_rural.geojson',
+      url: API_URL + '/dataset/31bbb8a5-eaad-4952-802f-267d898224f0/resource/ab706115-d919-4323-bc96-8f39632d2ad1/download/perimetro_rural.geojson',
       style: {
          fillColor: 'rgba(0, 200, 0, 0.4)',
          color: '#00ff00',
@@ -57,7 +59,7 @@
       name: 'Limite Urbano',
       type: 'polygon',
 
-      url: 'https://curvelo.vaz.io/dataset/ce0b8798-bc4c-4d5e-b87c-6a4c46dbb92f/resource/bbcfba99-aabf-453b-96bc-416f39f0f90b/download/limite_perurbano.geojson',
+      url: API_URL + '/dataset/ce0b8798-bc4c-4d5e-b87c-6a4c46dbb92f/resource/bbcfba99-aabf-453b-96bc-416f39f0f90b/download/limite_perurbano.geojson',
       style: {
          fillColor: 'rgba(0, 200, 200, 0.4)',
          color: '#00ff00',
@@ -71,7 +73,7 @@
       name: 'Lote',
       type: 'polygon',
 
-      url: 'https://curvelo.vaz.io/dataset/fea1bfd1-2125-4c97-995d-851aac5f2546/resource/016bd908-fdf0-4c4e-b476-9d4d2aaf310a/download/lote_08_2024.geojson',
+      url: API_URL + '/dataset/fea1bfd1-2125-4c97-995d-851aac5f2546/resource/016bd908-fdf0-4c4e-b476-9d4d2aaf310a/download/lote_08_2024.geojson',
       style: {
          fillColor: 'rgba(255, 0, 255, 0.2)',
          color: '#ff00ff',
@@ -84,7 +86,7 @@
       name: 'Hidro Curvelo',
       type: 'polygon',
 
-      url: 'https://curvelo.vaz.io/dataset/33db52bf-c019-48c6-a285-e145bf24936d/resource/0711f0ea-2ae9-4518-bdd5-358b037da184/download/hidro_curvelo.geojson',
+      url: API_URL + '/dataset/33db52bf-c019-48c6-a285-e145bf24936d/resource/0711f0ea-2ae9-4518-bdd5-358b037da184/download/hidro_curvelo.geojson',
       style: {
          color: '#0088FF',
          weight: 1,
@@ -99,7 +101,7 @@
       name: 'Iluminação pública',
       type: 'point',
 
-      url: 'https://curvelo.vaz.io/dataset/8749164d-a544-4e00-ae7f-cc5a00069800/resource/180a115c-f0ab-47bd-8896-5952a96da00f/download/pontos_iluminacao.geojson',
+      url: API_URL + '/dataset/8749164d-a544-4e00-ae7f-cc5a00069800/resource/180a115c-f0ab-47bd-8896-5952a96da00f/download/pontos_iluminacao.geojson',
       style: {
          fillColor: 'rgba(100, 100, 255, 0.4)',
          color: '#8888FF',
@@ -114,7 +116,7 @@
       name: 'Imóveis Públicos',
       type: 'polygon',
 
-      url: 'https://curvelo.vaz.io/dataset/c5be57f5-053b-4f40-bff1-9ce58fac0c75/resource/4301a430-0d1d-4daf-8086-f26239333faf/download/imoveis.geojson',
+      url: API_URL + '/dataset/c5be57f5-053b-4f40-bff1-9ce58fac0c75/resource/4301a430-0d1d-4daf-8086-f26239333faf/download/imoveis.geojson',
       style: {
          fillColor: 'rgba(255, 0, 0, 0.2)',
          color: '#ff0000',
@@ -128,7 +130,7 @@
       name: 'Logradouros',
       type: 'polygon',
 
-      url: 'https://curvelo.vaz.io/dataset/0f68f155-2cfb-4862-b31a-f21445ff9a61/resource/501540e5-90b4-434e-80a7-a4d3b7d114da/download/logradouros_08_2024.geojson',
+      url: API_URL + '/dataset/0f68f155-2cfb-4862-b31a-f21445ff9a61/resource/501540e5-90b4-434e-80a7-a4d3b7d114da/download/logradouros_08_2024.geojson',
       style: {
          fillColor: 'rgba(0, 0, 255, 0.2)',
          color: '#0000FF',
@@ -142,7 +144,7 @@
       name: 'Hierarquia Viária',
       type: 'polygon',
 
-      url: 'https://curvelo.vaz.io/dataset/4f551b93-dd8c-47b0-8074-24f33e9a4d53/resource/860b5acf-48c4-461c-a6cc-ebe71d849686/download/hierarquia_viaria_pd.geojson',
+      url: API_URL + '/dataset/4f551b93-dd8c-47b0-8074-24f33e9a4d53/resource/860b5acf-48c4-461c-a6cc-ebe71d849686/download/hierarquia_viaria_pd.geojson',
       style: {
          fillColor: 'rgba(0, 255, 255, 0.2)',
          color: '#00FFFF',
@@ -156,7 +158,7 @@
       name: 'Edificações',
       type: 'polygon',
 
-      url: 'https://curvelo.vaz.io/dataset/3b9826eb-1436-438f-9b09-d8809fb981c3/resource/79b14382-c5c2-4fcf-850d-e26b3dc31742/download/edificacoes.geojson',
+      url: API_URL + '/dataset/3b9826eb-1436-438f-9b09-d8809fb981c3/resource/79b14382-c5c2-4fcf-850d-e26b3dc31742/download/edificacoes.geojson',
       style: {
          fillColor: 'rgba(0, 255, 255, 0.2)',
          color: '#FFAA00',
@@ -172,7 +174,7 @@
       name: 'Inscrições cadastrais',
       type: 'point',
 
-      url: 'https://curvelo.vaz.io/dataset/916257e3-647a-46b7-9a89-d08560d4b3fe/resource/f8c2e275-f9bf-435e-9f1b-9c51c1294776/download/inscricoes_cadastrais_08_2024.geojson',
+      url: API_URL + '/dataset/916257e3-647a-46b7-9a89-d08560d4b3fe/resource/f8c2e275-f9bf-435e-9f1b-9c51c1294776/download/inscricoes_cadastrais_08_2024.geojson',
       style: {
          fillColor: 'rgba(0, 0, 255, 0.2)',
          color: '#FF88FF',
@@ -203,8 +205,8 @@
       const img = L.DomUtil.create('img', 'logo-image', container);
       img.alt = 'Curvelo Aberta';
 
-      img.src = 'https://curvelo.vaz.io/uploads/admin/2024-10-30-204654.824686curvelo-aberta-logo.png';
-      img.onclick = () => window.open('https://curvelo.vaz.io', '_blank');
+      img.src = '/uploads/admin/2024-10-30-204654.824686curvelo-aberta-logo.png';
+      img.onclick = () => window.open('', '_blank');
 
       // Prevent click events from propagating to the map
       L.DomEvent.disableClickPropagation(container);
@@ -403,7 +405,7 @@
     transition: all 0.3s ease;
     transform-origin: left;
     font-size: 9pt;
-    background: url('https://curvelo.vaz.io/curvelo-background.png');
+    background: url('/curvelo-background.png');
   }
 
   .menu.collapsed .menu-content {
