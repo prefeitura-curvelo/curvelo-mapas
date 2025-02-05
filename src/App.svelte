@@ -6,7 +6,7 @@
   import 'leaflet.markercluster/dist/MarkerCluster.css';
   import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
 
-  const API_URL = 'https://mapas.curvelo.mg.gov.br';
+  const API_URL = 'https://dados.curvelo.mg.gov.br';
 
   const layerGroups = [
     { 
@@ -538,7 +538,6 @@
 <div class="container">
   <div class="menu {isMenuCollapsed ? 'collapsed' : 'expanded'}">
     <div class="menu-content">
-      <h2>Camadas</h2>
       <div class="layers">
       {#each layerGroups as layerGroup}
         <h3>{layerGroup['name']}</h3>
