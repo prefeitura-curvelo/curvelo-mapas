@@ -18,5 +18,5 @@ jobs:
         run: |
           npm i
           npm run build
-          cp -vr build/* /opt/ckan-mapas/
+          cp -vr dist/* /opt/ckan-mapas/
         shell: bash
