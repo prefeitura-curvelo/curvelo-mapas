@@ -558,7 +558,7 @@
                 {loadingStates.get(layer.id)}
               </div>
             {/if}
-            <a class="ckan-link" target="_blank" href="{layer_source(layer.url)}">🔍</a>
+            <a class="ckan-link" target="_blank" href="{layer_source(layer.url)}">⬇️</a>
           </div>
         </div>
         {/if}
