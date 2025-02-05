@@ -33,7 +33,7 @@
       id: 'layer8',
       name: 'Macrozoneamento',
       type: 'polygon',
-      url: API_URL + '/dataset/716c0bf0-6b54-4b8a-b07f-79985cf672e6/resource/d6609383-4485-4a3d-8ba5-a9cde647e02c/download/macrozoneamento.geojson',
+      url: API_URL + '/dataset/82e1c7c3-6341-46df-9a17-aa3c3383a4c6/resource/fe906a2a-a40f-4992-bcf3-bfb10935ecc6/download/macrozoneamento.geojson',
       style: {
          fillColor: 'rgba(200, 200, 0, 0.2)',
          color: '#AAAA00',
