@@ -205,7 +205,7 @@
       const img = L.DomUtil.create('img', 'logo-image', container);
       img.alt = 'Curvelo Aberta';
 
-      img.src = 'https://curvelo.vaz.io/uploads/admin/2024-10-30-204654.824686curvelo-aberta-logo.png';
+      img.src = 'https://dados.curvelo.mg.gov.br/uploads/admin/2025-02-06-052313.446052curvelo-aberta-logo.png';
       img.onclick = () => window.open('', '_blank');
 
       // Prevent click events from propagating to the map
