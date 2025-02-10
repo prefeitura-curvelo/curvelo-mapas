@@ -45,7 +45,7 @@
       id: 'layer3',
       name: 'Perímetro Rural',
       type: 'polygon',
-      url: API_URL + '/dataset/31bbb8a5-eaad-4952-802f-267d898224f0/resource/ab706115-d919-4323-bc96-8f39632d2ad1/download/perimetro_rural.geojson',
+      url: API_URL + '/dataset/1ad991cc-6b23-40fa-b9d1-fd0289fc0a76/resource/f6c22bde-d66c-4580-aa58-f120246299a1/download/perimetro_rural.geojson',
       style: {
          fillColor: 'rgba(0, 200, 0, 0.4)',
          color: '#00ff00',
@@ -495,7 +495,7 @@
 
   .layers {
     background-color: white;
-    overflow: scroll;
+    overflow-y: scroll;
     max-height: 90%;
   }
 
