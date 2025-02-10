@@ -59,7 +59,7 @@
       name: 'Limite Urbano',
       type: 'polygon',
 
-      url: API_URL + '/dataset/ce0b8798-bc4c-4d5e-b87c-6a4c46dbb92f/resource/bbcfba99-aabf-453b-96bc-416f39f0f90b/download/limite_perurbano.geojson',
+      url: API_URL + '/dataset/d09ac556-f935-416a-9fb6-0f54c28e2f91/resource/f015aaf9-d26b-491c-878a-14fdf8522074/download/limite_perurbano.geojson',
       style: {
          fillColor: 'rgba(0, 200, 200, 0.4)',
          color: '#00ff00',
@@ -73,7 +73,7 @@
       name: 'Lote',
       type: 'polygon',
 
-      url: API_URL + '/dataset/fea1bfd1-2125-4c97-995d-851aac5f2546/resource/016bd908-fdf0-4c4e-b476-9d4d2aaf310a/download/lote_08_2024.geojson',
+      url: API_URL + '/dataset/95e57e53-8467-4784-9f0a-3c3a2fe48a18/resource/d20b34a8-c322-409d-b2f9-a7715438af01/download/lote_08_2024.geojson',
       style: {
          fillColor: 'rgba(255, 0, 255, 0.2)',
          color: '#ff00ff',
@@ -86,7 +86,7 @@
       name: 'Hidro Curvelo',
       type: 'polygon',
 
-      url: API_URL + '/dataset/33db52bf-c019-48c6-a285-e145bf24936d/resource/0711f0ea-2ae9-4518-bdd5-358b037da184/download/hidro_curvelo.geojson',
+      url: API_URL + '/dataset/0cb270b6-2633-41af-806e-0fb88298d6b9/resource/02620151-92f5-42cd-b115-3c44bbcab20e/download/hidro_curvelo.geojson',
       style: {
          color: '#0088FF',
          weight: 1,
@@ -101,7 +101,7 @@
       name: 'Iluminação pública',
       type: 'point',
 
-      url: API_URL + '/dataset/8749164d-a544-4e00-ae7f-cc5a00069800/resource/180a115c-f0ab-47bd-8896-5952a96da00f/download/pontos_iluminacao.geojson',
+      url: API_URL + '/dataset/30929567-d56c-4a50-87bc-7075dfc4aec3/resource/0f6c5345-5954-4136-8a4d-e4eca3f6325d/download/pontos_iluminacao.geojson',
       style: {
          fillColor: 'rgba(100, 100, 255, 0.4)',
          color: '#8888FF',
@@ -116,7 +116,7 @@
       name: 'Imóveis Públicos',
       type: 'polygon',
 
-      url: API_URL + '/dataset/c5be57f5-053b-4f40-bff1-9ce58fac0c75/resource/4301a430-0d1d-4daf-8086-f26239333faf/download/imoveis.geojson',
+      url: API_URL + '/dataset/45fda47d-82fd-4bea-98c3-8e39ac5fa7ec/resource/f6a9270f-607e-4ed1-bd3e-82260f33ccd4/download/imoveis.geojson',
       style: {
          fillColor: 'rgba(255, 0, 0, 0.2)',
          color: '#ff0000',
@@ -130,7 +130,7 @@
       name: 'Logradouros',
       type: 'polygon',
 
-      url: API_URL + '/dataset/0f68f155-2cfb-4862-b31a-f21445ff9a61/resource/501540e5-90b4-434e-80a7-a4d3b7d114da/download/logradouros_08_2024.geojson',
+      url: API_URL + '/dataset/b1dcffa6-c7bd-42e8-93f5-52b5ea5f4f92/resource/fd1a784d-7ad4-4fee-b414-18a6c2bd0eb1/download/logradouros_08_2024.geojson',
       style: {
          fillColor: 'rgba(0, 0, 255, 0.2)',
          color: '#0000FF',
@@ -144,7 +144,7 @@
       name: 'Hierarquia Viária',
       type: 'polygon',
 
-      url: API_URL + '/dataset/4f551b93-dd8c-47b0-8074-24f33e9a4d53/resource/860b5acf-48c4-461c-a6cc-ebe71d849686/download/hierarquia_viaria_pd.geojson',
+      url: API_URL + '/dataset/87aee15c-d16d-465c-833c-61c32b90e8ff/resource/d151752f-5e03-4c46-bfbe-2a04ccade2fa/download/hierarquia_viaria_pd.geojson',
       style: {
          fillColor: 'rgba(0, 255, 255, 0.2)',
          color: '#00FFFF',
@@ -158,7 +158,7 @@
       name: 'Edificações',
       type: 'polygon',
 
-      url: API_URL + '/dataset/3b9826eb-1436-438f-9b09-d8809fb981c3/resource/79b14382-c5c2-4fcf-850d-e26b3dc31742/download/edificacoes.geojson',
+      url: API_URL + '/dataset/01dc01aa-c734-4ef1-b4f5-f6f5378310df/resource/f3d859f3-2661-4e5a-9e4b-23c0f253a8ae/download/edificacoes.geojson',
       style: {
          fillColor: 'rgba(0, 255, 255, 0.2)',
          color: '#FFAA00',
@@ -174,7 +174,7 @@
       name: 'Inscrições cadastrais',
       type: 'point',
 
-      url: API_URL + '/dataset/916257e3-647a-46b7-9a89-d08560d4b3fe/resource/f8c2e275-f9bf-435e-9f1b-9c51c1294776/download/inscricoes_cadastrais_08_2024.geojson',
+      url: API_URL + '/dataset/4d4ace36-53f3-4b1c-8ecd-2cb728fc8bbc/resource/371e00e2-a7d6-4b98-aacc-846c9e57faef/download/inscricoes_cadastrais_08_2024.geojson',
       style: {
          fillColor: 'rgba(0, 0, 255, 0.2)',
          color: '#FF88FF',
@@ -205,7 +205,7 @@
       const img = L.DomUtil.create('img', 'logo-image', container);
       img.alt = 'Curvelo Aberta';
 
-      img.src = 'https://curvelo.vaz.io/uploads/admin/2024-10-30-204654.824686curvelo-aberta-logo.png';
+      img.src = 'https://dados.curvelo.mg.gov.br/uploads/admin/2025-02-06-052313.446052curvelo-aberta-logo.png';
       img.onclick = () => window.open('', '_blank');
 
       // Prevent click events from propagating to the map
