@@ -17,7 +17,14 @@
     //   'name': 'Cadastro',
     //   'layers': ['layer5', 'layer7', 'layer2', 'layer9', 'layer1']
     // },
-    // 'Equipamentos': [],
+    {
+      'name': 'Equipamentos',
+      'layers': []
+    },
+    {
+      'name': 'Habitação',
+      'layers': []
+    },
     { 
       'name': 'Infraestrutura urbana',
       'layers': ['layer14', 'layer11']
