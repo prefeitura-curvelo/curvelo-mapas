@@ -43,9 +43,9 @@
 
     {
       id: 'layer3',
-      name: 'Perímetro Rural',
+      name: 'LC_176_2022',
       type: 'polygon',
-      url: API_URL + '/dataset/1ad991cc-6b23-40fa-b9d1-fd0289fc0a76/resource/f6c22bde-d66c-4580-aa58-f120246299a1/download/perimetro_rural.geojson',
+      url: API_URL + '/dataset/7b45c447-1004-471a-97ff-fd1af1dcd34c/resource/ec73a44b-a1ef-4d09-9eca-b04c272b033b/download/lc_176_2022.geojson',
       style: {
          fillColor: 'rgba(0, 200, 0, 0.4)',
          color: '#00ff00',
@@ -83,16 +83,16 @@
     },
     {
       id: 'layer10',
-      name: 'Hidro Curvelo',
+      name: 'Áreas verdes dos Loteamentos ',
       type: 'polygon',
 
-      url: API_URL + '/dataset/0cb270b6-2633-41af-806e-0fb88298d6b9/resource/02620151-92f5-42cd-b115-3c44bbcab20e/download/hidro_curvelo.geojson',
+      url: API_URL + '/dataset/a8d71a59-b211-4e43-ba3d-05336891ba3b/resource/4be28723-e4be-4e23-90e5-2ce155104f9a/download/area_verde_loteamentos.geojson',
       style: {
          color: '#0088FF',
          weight: 1,
          pointRadius: 2,
          radius: 5,
-         color: 'blue',
+//         color: 'blue',
          pointFill: '#00DDDD'
       }
     },
@@ -144,7 +144,7 @@
       name: 'Hierarquia Viária',
       type: 'polygon',
 
-      url: API_URL + '/dataset/87aee15c-d16d-465c-833c-61c32b90e8ff/resource/d151752f-5e03-4c46-bfbe-2a04ccade2fa/download/hierarquia_viaria_pd.geojson',
+      url: API_URL + '/dataset/87aee15c-d16d-465c-833c-61c32b90e8ff/resource/d151752f-5e03-4c46-bfbe-2a04ccade2fa/download/hierarquia_viaria.geojson',
       style: {
          fillColor: 'rgba(0, 255, 255, 0.2)',
          color: '#00FFFF',
