@@ -10,7 +10,7 @@
 
   const layerGroups = [
     { 
-      'name': 'Limites Administrativos',
+      'name': 'Limites administrativos',
       'layers': ['layer12', 'layer4', 'layer13']
     },
     { 
@@ -19,15 +19,15 @@
     },
     // 'Equipamentos': [],
     { 
-      'name': 'Infraestrutura Urbana',
+      'name': 'Infraestrutura urbana',
       'layers': ['layer11']
     },
     { 
-      'name': 'Legislação Urbana',
+      'name': 'Legislação urbana',
       'layers': ['layer6', 'layer8', 'layer3']
     },
     { 
-      'name': 'Meio Físico',
+      'name': 'Meio físico',
       'layers': ['layer10']
     }
   ]
@@ -115,7 +115,7 @@
     },
     {
       id: 'layer10',
-      name: 'Áreas verdes dos Loteamentos ',
+      name: 'Áreas verdes dos loteamentos ',
       type: 'polygon',
 
       url: API_URL + '/dataset/a8d71a59-b211-4e43-ba3d-05336891ba3b/resource/4be28723-e4be-4e23-90e5-2ce155104f9a/download/area_verde_loteamentos.geojson',
@@ -145,7 +145,7 @@
     },
     {
       id: 'layer1',
-      name: 'Imóveis Públicos',
+      name: 'Imóveis públicos',
       type: 'polygon',
 
       url: API_URL + '/dataset/45fda47d-82fd-4bea-98c3-8e39ac5fa7ec/resource/f6a9270f-607e-4ed1-bd3e-82260f33ccd4/download/imoveis.geojson',
@@ -173,7 +173,7 @@
     },
     {
       id: 'layer6',
-      name: 'Hierarquia Viária',
+      name: 'Hierarquia viária',
       type: 'polygon',
 
       url: API_URL + '/dataset/87aee15c-d16d-465c-833c-61c32b90e8ff/resource/9557013e-5739-4758-bc01-d1c332cb86c8/download/hierarquia_viaria.geojson',
