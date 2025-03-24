@@ -20,7 +20,7 @@
     // 'Equipamentos': [],
     { 
       'name': 'Infraestrutura urbana',
-      'layers': ['layer11']
+      'layers': ['layer14', 'layer11']
     },
     { 
       'name': 'Legislação urbana',
@@ -130,10 +130,25 @@
     },
     {
       id: 'layer11',
-      name: 'Iluminação pública',
+      name: 'Passeios',
       type: 'point',
 
-      url: API_URL + '/dataset/30929567-d56c-4a50-87bc-7075dfc4aec3/resource/0f6c5345-5954-4136-8a4d-e4eca3f6325d/download/pontos_iluminacao.geojson',
+      url: API_URL + '/dataset/007aec9b-cdef-40f7-b92a-89fcff04c7a3/resource/8f11730b-acca-4726-83a4-c0288ceb008f/download/passeios.geojson',
+      style: {
+         fillColor: 'rgba(100, 100, 255, 0.4)',
+         color: '#8888FF',
+         weight: 2,
+         pointRadius: 2,
+         radius: 2,
+         pointFill: '#00DDDD'
+      }
+    },
+    {
+      id: 'layer14',
+      name: 'Logradouros',
+      type: 'point',
+
+      url: API_URL + '/dataset/b1dcffa6-c7bd-42e8-93f5-52b5ea5f4f92/resource/65d8f7ac-cf7a-4e17-b490-b3d9e0b740dc/download/trecho_logradouro.geojson',
       style: {
          fillColor: 'rgba(100, 100, 255, 0.4)',
          color: '#8888FF',
