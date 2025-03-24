@@ -25,6 +25,18 @@
       'name': 'Habitação',
       'layers': []
     },
+    {
+      'name': 'Informações imobiliárias',
+      'layers': []
+    },
+    {
+      'name': 'Licenciamento',
+      'layers': []
+    },
+    {
+      'name': 'Regularização fundiária',
+      'layers': []
+    },
     { 
       'name': 'Infraestrutura urbana',
       'layers': ['layer14', 'layer11']
