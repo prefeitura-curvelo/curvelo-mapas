@@ -13,10 +13,10 @@
       'name': 'Limites administrativos',
       'layers': ['layer12', 'layer4', 'layer13']
     },
-    { 
-      'name': 'Cadastro',
-      'layers': ['layer5', 'layer7', 'layer2', 'layer9', 'layer1']
-    },
+    // { 
+    //   'name': 'Cadastro',
+    //   'layers': ['layer5', 'layer7', 'layer2', 'layer9', 'layer1']
+    // },
     // 'Equipamentos': [],
     { 
       'name': 'Infraestrutura urbana',
