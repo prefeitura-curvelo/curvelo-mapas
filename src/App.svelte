@@ -144,7 +144,7 @@
       name: 'Hierarquia Viária',
       type: 'polygon',
 
-      url: API_URL + '/dataset/87aee15c-d16d-465c-833c-61c32b90e8ff/resource/d151752f-5e03-4c46-bfbe-2a04ccade2fa/download/hierarquia_viaria.geojson',
+      url: API_URL + '/dataset/87aee15c-d16d-465c-833c-61c32b90e8ff/resource/9557013e-5739-4758-bc01-d1c332cb86c8/download/hierarquia_viaria.geojson',
       style: {
          fillColor: 'rgba(0, 255, 255, 0.2)',
          color: '#00FFFF',
