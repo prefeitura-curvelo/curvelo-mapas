@@ -77,7 +77,7 @@
       name: 'Limite urbano',
       type: 'polygon',
 
-      url: API_URL + 'https://dados.curvelo.mg.gov.br/dataset/d09ac556-f935-416a-9fb6-0f54c28e2f91/resource/f015aaf9-d26b-491c-878a-14fdf8522074/download/limite_perurbano.geojson',
+      url: API_URL + '/dataset/d09ac556-f935-416a-9fb6-0f54c28e2f91/resource/f015aaf9-d26b-491c-878a-14fdf8522074/download/limite_perurbano.geojson',
       style: {
          fillColor: 'rgba(0, 200, 200, 0.4)',
          color: '#00ff00',
