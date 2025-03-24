@@ -10,6 +10,10 @@
 
   const layerGroups = [
     { 
+      'name': 'Limites Administrativos',
+      'layers': ['layer12', 'layer4', 'layer13']
+    },
+    { 
       'name': 'Cadastro',
       'layers': ['layer5', 'layer7', 'layer2', 'layer9', 'layer1']
     },
@@ -20,7 +24,7 @@
     },
     { 
       'name': 'Legislação Urbana',
-      'layers': ['layer6', 'layer4', 'layer8', 'layer3']
+      'layers': ['layer6', 'layer8', 'layer3']
     },
     { 
       'name': 'Meio Físico',
@@ -55,11 +59,39 @@
       }
     },
     {
-      id: 'layer4',
-      name: 'Limite Urbano',
+      id: 'layer12',
+      name: 'Limite município',
       type: 'polygon',
 
-      url: API_URL + '/dataset/d09ac556-f935-416a-9fb6-0f54c28e2f91/resource/f015aaf9-d26b-491c-878a-14fdf8522074/download/limite_perurbano.geojson',
+      url: API_URL + '/dataset/d09ac556-f935-416a-9fb6-0f54c28e2f91/resource/30b43ca9-8353-439a-b88c-2f56c7784396/download/limite_municipio.geojson',
+      style: {
+         fillColor: 'rgba(0, 200, 200, 0.4)',
+         color: '#00ff00',
+         weight: 2,
+         pointRadius: 5,
+         pointFill: '#00DDDD'
+      }
+    },
+    {
+      id: 'layer4',
+      name: 'Limite urbano',
+      type: 'polygon',
+
+      url: API_URL + 'https://dados.curvelo.mg.gov.br/dataset/d09ac556-f935-416a-9fb6-0f54c28e2f91/resource/f015aaf9-d26b-491c-878a-14fdf8522074/download/limite_perurbano.geojson',
+      style: {
+         fillColor: 'rgba(0, 200, 200, 0.4)',
+         color: '#00ff00',
+         weight: 2,
+         pointRadius: 5,
+         pointFill: '#00DDDD'
+      }
+    },
+    {
+      id: 'layer13',
+      name: 'Limite rural',
+      type: 'polygon',
+
+      url: API_URL + '/dataset/d09ac556-f935-416a-9fb6-0f54c28e2f91/resource/8132bb0a-fcd4-4fdf-9d68-1d276eaafd62/download/limite_perrural.geojson',
       style: {
          fillColor: 'rgba(0, 200, 200, 0.4)',
          color: '#00ff00',
