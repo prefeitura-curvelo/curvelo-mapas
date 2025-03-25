@@ -11,49 +11,45 @@
   const layerGroups = [
     { 
       'name': 'Limites administrativos',
-      'layers': ['layer12', 'layer4', 'layer13']
+      'layers': ['layer3', 'layer4', 'layer5']
     },
-    // { 
-    //   'name': 'Cadastro',
-    //   'layers': ['layer5', 'layer7', 'layer2', 'layer9', 'layer1']
-    // },
     {
       'name': 'Equipamentos',
-      'layers': []
+      'layers': ['layer20', 'layer21', 'layer22', 'layer23']
     },
     {
       'name': 'Habitação',
-      'layers': []
+      'layers': ['layer24']
     },
     {
       'name': 'Informações imobiliárias',
-      'layers': []
+      'layers': ['layer6', 'layer10', 'layer13', 'layer14', 'layer15', 'layer16', 'layer17', 'layer18', 'layer19']
     },
     {
       'name': 'Licenciamento',
-      'layers': []
+      'layers': ['layer25', 'layer26', 'layer27']
     },
     {
       'name': 'Regularização fundiária',
-      'layers': []
+      'layers': ['layer28']
     },
     { 
       'name': 'Infraestrutura urbana',
-      'layers': ['layer14', 'layer11']
+      'layers': ['layer8', 'layer9']
     },
     { 
       'name': 'Legislação urbana',
-      'layers': ['layer6', 'layer8', 'layer3']
+      'layers': ['layer1', 'layer2', 'layer12']
     },
     { 
       'name': 'Meio físico',
-      'layers': ['layer10']
+      'layers': ['layer7']
     }
   ]
   
   const layerConfig = [
     {
-      id: 'layer8',
+      id: 'layer1',
       name: 'Macrozoneamento',
       type: 'polygon',
       url: API_URL + '/dataset/82e1c7c3-6341-46df-9a17-aa3c3383a4c6/resource/fe906a2a-a40f-4992-bcf3-bfb10935ecc6/download/macrozoneamento.geojson',
@@ -65,7 +61,7 @@
     },
 
     {
-      id: 'layer3',
+      id: 'layer2',
       name: 'LC_176_2022',
       type: 'polygon',
       url: API_URL + '/dataset/7b45c447-1004-471a-97ff-fd1af1dcd34c/resource/ec73a44b-a1ef-4d09-9eca-b04c272b033b/download/lc_176_2022.geojson',
@@ -78,7 +74,7 @@
       }
     },
     {
-      id: 'layer12',
+      id: 'layer3',
       name: 'Limite município',
       type: 'polygon',
 
@@ -106,7 +102,7 @@
       }
     },
     {
-      id: 'layer13',
+      id: 'layer5',
       name: 'Limite rural',
       type: 'polygon',
 
@@ -120,11 +116,11 @@
       }
     },
     {
-      id: 'layer9',
-      name: 'Lote',
+      id: 'layer6',
+      name: 'Lotes',
       type: 'polygon',
 
-      url: API_URL + '/dataset/95e57e53-8467-4784-9f0a-3c3a2fe48a18/resource/d20b34a8-c322-409d-b2f9-a7715438af01/download/lote_08_2024.geojson',
+      url: API_URL + '/dataset/95e57e53-8467-4784-9f0a-3c3a2fe48a18/resource/5fcfbc2d-27c8-4099-a83b-81bcfd457018/download/lotes.geojson',
       style: {
          fillColor: 'rgba(255, 0, 255, 0.2)',
          color: '#ff00ff',
@@ -133,7 +129,7 @@
       }
     },
     {
-      id: 'layer10',
+      id: 'layer7',
       name: 'Áreas verdes dos loteamentos ',
       type: 'polygon',
 
@@ -143,12 +139,11 @@
          weight: 1,
          pointRadius: 2,
          radius: 5,
-//         color: 'blue',
          pointFill: '#00DDDD'
       }
     },
     {
-      id: 'layer11',
+      id: 'layer8',
       name: 'Passeios',
       type: 'point',
 
@@ -163,7 +158,7 @@
       }
     },
     {
-      id: 'layer14',
+      id: 'layer9',
       name: 'Logradouros',
       type: 'point',
 
@@ -178,11 +173,11 @@
       }
     },
     {
-      id: 'layer1',
-      name: 'Imóveis públicos',
+      id: 'layer10',
+      name: 'Imóveis município',
       type: 'polygon',
 
-      url: API_URL + '/dataset/45fda47d-82fd-4bea-98c3-8e39ac5fa7ec/resource/f6a9270f-607e-4ed1-bd3e-82260f33ccd4/download/imoveis.geojson',
+      url: API_URL + '/dataset/5ff3ea1b-8c71-4e22-9038-35ab05f6d7ea/resource/2a22b47f-0a83-42f1-9a62-7f687e87f8ac/download/imoveis_municipio.geojson',
       style: {
          fillColor: 'rgba(255, 0, 0, 0.2)',
          color: '#ff0000',
@@ -192,7 +187,7 @@
       }
     },
     {
-      id: 'layer2',
+      id: 'layer11',
       name: 'Logradouros',
       type: 'polygon',
 
@@ -206,7 +201,7 @@
       }
     },
     {
-      id: 'layer6',
+      id: 'layer12',
       name: 'Hierarquia viária',
       type: 'polygon',
 
@@ -220,11 +215,11 @@
       }
     },
     {
-      id: 'layer7',
-      name: 'Edificações',
+      id: 'layer13',
+      name: 'Edificação',
       type: 'polygon',
 
-      url: API_URL + '/dataset/01dc01aa-c734-4ef1-b4f5-f6f5378310df/resource/f3d859f3-2661-4e5a-9e4b-23c0f253a8ae/download/edificacoes.geojson',
+      url: API_URL + '/dataset/01dc01aa-c734-4ef1-b4f5-f6f5378310df/resource/d65f3c99-9850-4083-837a-0bd39eeb10c4/download/edificacao.geojson',
       style: {
          fillColor: 'rgba(0, 255, 255, 0.2)',
          color: '#FFAA00',
@@ -233,14 +228,12 @@
          pointFill: '#00ffff'
       }
     },
-
-
     {
-      id: 'layer5',
-      name: 'Inscrições cadastrais',
+      id: 'layer14',
+      name: 'Inscrição cadastral',
       type: 'point',
 
-      url: API_URL + '/dataset/4d4ace36-53f3-4b1c-8ecd-2cb728fc8bbc/resource/371e00e2-a7d6-4b98-aacc-846c9e57faef/download/inscricoes_cadastrais_08_2024.geojson',
+      url: API_URL + '/4d4ace36-53f3-4b1c-8ecd-2cb728fc8bbc/resource/c20eca97-3287-4f62-a701-a81737b03a68/download/inscricao_cadastral.geojson',
       style: {
          fillColor: 'rgba(0, 0, 255, 0.2)',
          color: '#FF88FF',
@@ -250,7 +243,202 @@
          pointFill: '#00DDDD'
       }
     },
+    {
+      id: 'layer15',
+      name: 'Bairros',
+      type: 'polygon',
 
+      url: API_URL + '/dataset/2cf4267d-be96-465a-af0a-a0ce5de9d485/resource/29a01453-46f7-40b6-b67a-ebb2b4b4d249/download/bairros.geojson',
+      style: {
+         fillColor: 'rgba(255, 0, 0, 0.2)',
+         color: '#ff0000',
+         weight: 2,
+         pointRadius: 5,
+         pointFill: '#ff0000'
+      }
+    },
+    {
+      id: 'layer16',
+      name: 'Quadras',
+      type: 'polygon',
+
+      url: API_URL + '/dataset/f3cb5d43-5f41-47a1-b8c4-b1f3b962b76f/resource/76acb62d-f1d4-4efa-92a0-c171e56b0e19/download/quadras.geojson',
+      style: {
+         fillColor: 'rgba(255, 0, 0, 0.2)',
+         color: '#ff0000',
+         weight: 2,
+         pointRadius: 5,
+         pointFill: '#ff0000'
+      }
+    },
+    {
+      id: 'layer17',
+      name: 'APP',
+      type: 'polygon',
+
+      url: API_URL + '/dataset/fa8cbd9c-bfdf-44e6-b220-2f008c0d127b/resource/266fa1e1-fb06-4c3a-b25b-1b269551dabb/download/app.geojson',
+      style: {
+         fillColor: 'rgba(255, 0, 0, 0.2)',
+         color: '#ff0000',
+         weight: 2,
+         pointRadius: 5,
+         pointFill: '#ff0000'
+      }
+    },
+    {
+      id: 'layer18',
+      name: 'Zonas fiscais',
+      type: 'polygon',
+
+      url: API_URL + '/dataset/219ae8ba-5d07-4df5-8092-69315090609f/resource/742ca91e-b959-46d8-aa47-449814875dfd/download/zonas_fiscais.geojson',
+      style: {
+         fillColor: 'rgba(255, 0, 0, 0.2)',
+         color: '#ff0000',
+         weight: 2,
+         pointRadius: 5,
+         pointFill: '#ff0000'
+      }
+    },
+    {
+      id: 'layer19',
+      name: 'Áreas institucionais dos loteamentos',
+      type: 'polygon',
+
+      url: API_URL + '/dataset/1aa76d64-bf9e-41b3-bed4-1047533fff24/resource/8ce2a816-b319-4301-b114-9f51277188b8/download/area_institucional_loteamentos.geojson',
+      style: {
+         fillColor: 'rgba(255, 0, 0, 0.2)',
+         color: '#ff0000',
+         weight: 2,
+         pointRadius: 5,
+         pointFill: '#ff0000'
+      }
+    },
+    {
+      id: 'layer20',
+      name: 'Educação',
+      type: 'polygon',
+
+      url: API_URL + '/dataset/f5ea0755-f60b-45c7-9331-496700acb2a9/resource/f8222461-79a5-436d-8b56-62f3751e10c7/download/educacao.geojson',
+      style: {
+         fillColor: 'rgba(255, 0, 0, 0.2)',
+         color: '#ff0000',
+         weight: 2,
+         pointRadius: 5,
+         pointFill: '#ff0000'
+      }
+    },
+    {
+      id: 'layer21',
+      name: 'Escolas',
+      type: 'polygon',
+
+      url: API_URL + '/dataset/0426cfca-22ec-4f79-ad30-d52cd2b785d2/resource/0345399c-8b61-4753-9973-84ac1079f94c/download/escolas.geojson',
+      style: {
+         fillColor: 'rgba(255, 0, 0, 0.2)',
+         color: '#ff0000',
+         weight: 2,
+         pointRadius: 5,
+         pointFill: '#ff0000'
+      }
+    },
+    {
+      id: 'layer22',
+      name: 'Assistência social administração',
+      type: 'polygon',
+
+      url: API_URL + '/dataset/c4ff27f8-dc82-475c-866a-d75e20837957/resource/d0b6741e-a6ae-425b-801c-b6361997c642/download/assistencia_social_administracao.geojson',
+      style: {
+         fillColor: 'rgba(255, 0, 0, 0.2)',
+         color: '#ff0000',
+         weight: 2,
+         pointRadius: 5,
+         pointFill: '#ff0000'
+      }
+    },
+    {
+      id: 'layer23',
+      name: 'Postos de saúde',
+      type: 'polygon',
+
+      url: API_URL + '/dataset/e05e3dfb-fb0a-4568-bb33-3737b9f65a23/resource/85acb4b0-9deb-4190-9afb-6b03d8aa967f/download/pontos_saude.geojson',
+      style: {
+         fillColor: 'rgba(255, 0, 0, 0.2)',
+         color: '#ff0000',
+         weight: 2,
+         pointRadius: 5,
+         pointFill: '#ff0000'
+      }
+    },
+    {
+      id: 'layer24',
+      name: 'Conjuntos habitacionais',
+      type: 'polygon',
+
+      url: API_URL + '/dataset/7a0c3f0e-6008-4f87-9276-b0cfc4fff7e6/resource/cacfc1a8-6b2a-4887-ab5d-226c0e8c5b0c/download/conjuntos_habitacionais.geojson',
+      style: {
+         fillColor: 'rgba(255, 0, 0, 0.2)',
+         color: '#ff0000',
+         weight: 2,
+         pointRadius: 5,
+         pointFill: '#ff0000'
+      }
+    },
+    {
+      id: 'layer25',
+      name: 'Alvarás urbanísticos',
+      type: 'polygon',
+
+      url: API_URL + '/dataset/f29a2ae0-e934-417b-b07d-d197c4c1b701/resource/41974147-e4e4-44f7-9ad9-e95ce6b75403/download/alvaras_urbanisticos.geojson',
+      style: {
+         fillColor: 'rgba(255, 0, 0, 0.2)',
+         color: '#ff0000',
+         weight: 2,
+         pointRadius: 5,
+         pointFill: '#ff0000'
+      }
+    },
+    {
+      id: 'layer26',
+      name: 'Alvarás',
+      type: 'polygon',
+
+      url: API_URL + '/dataset/e9b3cf11-0d82-4623-8996-bc170ddd036c/resource/96ac5838-ff63-4375-8b21-dbf752903649/download/alvaras.geojson',
+      style: {
+         fillColor: 'rgba(255, 0, 0, 0.2)',
+         color: '#ff0000',
+         weight: 2,
+         pointRadius: 5,
+         pointFill: '#ff0000'
+      }
+    },
+    {
+      id: 'layer27',
+      name: 'Loteamento',
+      type: 'polygon',
+
+      url: API_URL + '/dataset/62c8eb86-b286-4819-91c9-48febfb1729c/resource/dd1eb84e-dbec-4995-8504-d6e344dc656c/download/loteamento.geojson',
+      style: {
+         fillColor: 'rgba(255, 0, 0, 0.2)',
+         color: '#ff0000',
+         weight: 2,
+         pointRadius: 5,
+         pointFill: '#ff0000'
+      }
+    },
+    {
+      id: 'layer28',
+      name: 'REURB',
+      type: 'polygon',
+
+      url: API_URL + '/dataset/fb1c5351-4e0f-4e85-a475-3b168d18d1e7/resource/09bd2f53-35d2-4a1f-a0c8-b15a7f60cd15/download/reurb.geojson',
+      style: {
+         fillColor: 'rgba(255, 0, 0, 0.2)',
+         color: '#ff0000',
+         weight: 2,
+         pointRadius: 5,
+         pointFill: '#ff0000'
+      }
+    },
   ];
 
   function layer_source(layer_url) {
@@ -433,7 +621,7 @@
   @media (max-width: 768px) {
     :global(.logo-image) {
       width: 80px;  /* Smaller on mobile */
-    }
+    }qq
   }
 
   :global(html, body) {
