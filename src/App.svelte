@@ -386,7 +386,7 @@
     {
       id: 'layer25',
       name: 'Alvarás urbanísticos',
-      type: 'point',
+      type: 'polygon',
 
       url: API_URL + '/dataset/f29a2ae0-e934-417b-b07d-d197c4c1b701/resource/41974147-e4e4-44f7-9ad9-e95ce6b75403/download/alvaras_urbanisticos.geojson',
       style: {
