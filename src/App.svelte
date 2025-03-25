@@ -233,7 +233,7 @@
       name: 'Inscrição cadastral',
       type: 'point',
 
-      url: API_URL + '/4d4ace36-53f3-4b1c-8ecd-2cb728fc8bbc/resource/c20eca97-3287-4f62-a701-a81737b03a68/download/inscricao_cadastral.geojson',
+      url: API_URL + '/dataset/4d4ace36-53f3-4b1c-8ecd-2cb728fc8bbc/resource/c20eca97-3287-4f62-a701-a81737b03a68/download/inscricao_cadastral.geojson',
       style: {
          fillColor: 'rgba(0, 0, 255, 0.2)',
          color: '#FF88FF',
