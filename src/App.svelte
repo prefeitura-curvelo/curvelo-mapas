@@ -621,7 +621,7 @@
   @media (max-width: 768px) {
     :global(.logo-image) {
       width: 80px;  /* Smaller on mobile */
-    }qq
+    }
   }
 
   :global(html, body) {
