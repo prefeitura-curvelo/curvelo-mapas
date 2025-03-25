@@ -145,7 +145,7 @@
     {
       id: 'layer8',
       name: 'Passeios',
-      type: 'point',
+      type: 'polygon',
 
       url: API_URL + '/dataset/007aec9b-cdef-40f7-b92a-89fcff04c7a3/resource/8f11730b-acca-4726-83a4-c0288ceb008f/download/passeios.geojson',
       style: {
@@ -160,7 +160,7 @@
     {
       id: 'layer9',
       name: 'Logradouros',
-      type: 'point',
+      type: 'polygon',
 
       url: API_URL + '/dataset/b1dcffa6-c7bd-42e8-93f5-52b5ea5f4f92/resource/65d8f7ac-cf7a-4e17-b490-b3d9e0b740dc/download/trecho_logradouro.geojson',
       style: {
