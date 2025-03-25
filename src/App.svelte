@@ -316,7 +316,7 @@
     {
       id: 'layer20',
       name: 'Educação',
-      type: 'polygon',
+      type: 'point',
 
       url: API_URL + '/dataset/f5ea0755-f60b-45c7-9331-496700acb2a9/resource/f8222461-79a5-436d-8b56-62f3751e10c7/download/educacao.geojson',
       style: {
@@ -330,7 +330,7 @@
     {
       id: 'layer21',
       name: 'Escolas',
-      type: 'polygon',
+      type: 'point',
 
       url: API_URL + '/dataset/0426cfca-22ec-4f79-ad30-d52cd2b785d2/resource/0345399c-8b61-4753-9973-84ac1079f94c/download/escolas.geojson',
       style: {
@@ -344,7 +344,7 @@
     {
       id: 'layer22',
       name: 'Assistência social administração',
-      type: 'polygon',
+      type: 'point',
 
       url: API_URL + '/dataset/c4ff27f8-dc82-475c-866a-d75e20837957/resource/d0b6741e-a6ae-425b-801c-b6361997c642/download/assistencia_social_administracao.geojson',
       style: {
@@ -358,7 +358,7 @@
     {
       id: 'layer23',
       name: 'Postos de saúde',
-      type: 'polygon',
+      type: 'point',
 
       url: API_URL + '/dataset/e05e3dfb-fb0a-4568-bb33-3737b9f65a23/resource/85acb4b0-9deb-4190-9afb-6b03d8aa967f/download/pontos_saude.geojson',
       style: {
@@ -386,7 +386,7 @@
     {
       id: 'layer25',
       name: 'Alvarás urbanísticos',
-      type: 'polygon',
+      type: 'point',
 
       url: API_URL + '/dataset/f29a2ae0-e934-417b-b07d-d197c4c1b701/resource/41974147-e4e4-44f7-9ad9-e95ce6b75403/download/alvaras_urbanisticos.geojson',
       style: {
