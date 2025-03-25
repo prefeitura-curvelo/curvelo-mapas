@@ -400,7 +400,7 @@
     {
       id: 'layer26',
       name: 'Alvarás',
-      type: 'polygon',
+      type: 'point',
 
       url: API_URL + '/dataset/e9b3cf11-0d82-4623-8996-bc170ddd036c/resource/96ac5838-ff63-4375-8b21-dbf752903649/download/alvaras.geojson',
       style: {
