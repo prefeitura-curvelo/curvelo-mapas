@@ -602,6 +602,10 @@
     }
   }
 
+  function toggleLayerGroup (event) {
+    event.target.nextElementSibling.classList.toggle("layer-collapsed");
+  }
+
   function toggleMenu() {
     isMenuCollapsed = !isMenuCollapsed;
   }
@@ -796,6 +800,23 @@
       max-width: 100px;
     }
   }
+
+  .layer-group {
+    overflow: hidden;
+    max-height: 0;
+  }
+
+  .layer-collapsed {
+    max-height: 100%;
+    transition: max-height 0.3s ease-out;
+
+  }
+
+  .about-link {
+    margin-top: 20px;
+    width: 100%; 
+    text-align: center;
+  }
 </style>
 
 <div class="container">
@@ -807,8 +828,8 @@
       </div>
       <div class="layers">
       {#each layerGroups as layerGroup}
-        <h3>{layerGroup['name']}</h3>
-        <div>
+        <h3 on:click={event => toggleLayerGroup(event)}>{layerGroup['name']} ({layerGroup['layers'].length})</h3>
+        <div class="layer-group">
       {#each layerConfig as layer}
         {#if layerGroup['layers'].includes(layer['id'])}
         <div class="layer-item">
@@ -834,7 +855,7 @@
 
       {/each}
       </div>
-    <a href="https://dados.curvelo.mg.gov.br/sobre">Sobre o Curvelo em Mapas</a>
+      <div class="about-link"><a href="https://dados.curvelo.mg.gov.br/sobre">Sobre o Curvelo em Mapas</a></div>
 
     </div>
     <button class="toggle-button" on:click={toggleMenu}>
