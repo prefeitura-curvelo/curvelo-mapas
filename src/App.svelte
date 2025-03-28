@@ -460,7 +460,7 @@
       img.alt = 'Curvelo Aberta';
 
       img.src = 'https://dados.curvelo.mg.gov.br/uploads/admin/2025-02-06-052313.446052curvelo-aberta-logo.png';
-      img.onclick = () => window.open('', '_blank');
+      img.onclick = () => window.open('https://dados.curvelo.mg.gov.br', '_blank');
 
       // Prevent click events from propagating to the map
       L.DomEvent.disableClickPropagation(container);
@@ -787,14 +787,28 @@
   .loaded {
     color: #4CAF50;
   }
+
+  .curvelo-mapas-logo {
+    width: 100%;
+    text-align: center;
+
+    img {
+      max-width: 100px;
+    }
+  }
 </style>
 
 <div class="container">
   <div class="menu {isMenuCollapsed ? 'collapsed' : 'expanded'}">
     <div class="menu-content">
+
+      <div class="curvelo-mapas-logo">
+      <img src="/public/curvelo-mapas.png">
+      </div>
       <div class="layers">
       {#each layerGroups as layerGroup}
         <h3>{layerGroup['name']}</h3>
+        <div>
       {#each layerConfig as layer}
         {#if layerGroup['layers'].includes(layer['id'])}
         <div class="layer-item">
@@ -816,8 +830,12 @@
         </div>
         {/if}
         {/each}
+        </div>
+
       {/each}
       </div>
+    <a href="https://dados.curvelo.mg.gov.br/sobre">Sobre o Curvelo em Mapas</a>
+
     </div>
     <button class="toggle-button" on:click={toggleMenu}>
       <span class="toggle-icon"></span>
