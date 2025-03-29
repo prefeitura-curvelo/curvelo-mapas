@@ -824,7 +824,7 @@
     <div class="menu-content">
 
       <div class="curvelo-mapas-logo">
-      <img src="/public/curvelo-mapas.png">
+      <img src="/curvelo-mapas.png">
       </div>
       <div class="layers">
       {#each layerGroups as layerGroup}
