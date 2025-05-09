@@ -330,8 +330,9 @@
     {
       id: 'layer21',
       name: 'Escolas',
-      type: 'point',
-
+      type: 'icon',
+      iconUrl: '/assets/school-icon.png',
+      iconSize: [32, 32],
       url: API_URL + '/dataset/0426cfca-22ec-4f79-ad30-d52cd2b785d2/resource/0345399c-8b61-4753-9973-84ac1079f94c/download/escolas.geojson',
       style: {
          fillColor: 'rgba(255, 0, 0, 0.2)',
@@ -358,8 +359,9 @@
     {
       id: 'layer23',
       name: 'Postos de saúde',
-      type: 'point',
-
+      type: 'icon',
+      iconUrl: '/assets/health-icon.svg',
+      iconSize: [32, 32],
       url: API_URL + '/dataset/e05e3dfb-fb0a-4568-bb33-3737b9f65a23/resource/85acb4b0-9deb-4190-9afb-6b03d8aa967f/download/pontos_saude.geojson',
       style: {
          fillColor: 'rgba(255, 0, 0, 0.2)',
@@ -552,14 +554,37 @@
   function createLayerGroup(config, geojsonData) {
     switch(config.type) {
       case 'icon':
-        var schoolIcon = L.icon({
-          iconUrl: '/school-icon.png',
-          iconSize: [32, 37],
-          iconAnchor: [16, 37],
-          popupAnchor: [0, -28]
+        const customIcon = L.icon({
+          iconUrl: config.iconUrl,
+          iconSize: config.iconSize || [32, 32],
+          iconAnchor: config.iconAnchor || [16, 32],
+          popupAnchor: config.popupAnchor || [0, -32]
         });
-      case 'point':
+        
         const markerCluster = L.markerClusterGroup({
+          chunkedLoading: true,
+          maxClusterRadius: 50,
+          spiderfyOnMaxZoom: false,
+          disableClusteringAtZoom: 14
+        });
+
+        L.geoJSON(geojsonData, {
+          pointToLayer: (feature, latlng) => {
+            return L.marker(latlng, { icon: customIcon });
+          },
+          onEachFeature: (feature, layer) => {
+            if (feature.properties) {
+              layer.bindPopup(() => {
+                return formatPopupContent(feature.properties);
+              });
+            }
+          }
+        }).addTo(markerCluster);
+
+        return markerCluster;
+        
+      case 'point':
+        const pointMarkerCluster = L.markerClusterGroup({
           chunkedLoading: true,
           maxClusterRadius: 50,
           spiderfyOnMaxZoom: false,
@@ -577,9 +602,9 @@
               });
             }
           }
-        }).addTo(markerCluster);
+        }).addTo(pointMarkerCluster);
 
-        return markerCluster;
+        return pointMarkerCluster;
 
       case 'polygon':
       case 'line':
