@@ -451,6 +451,11 @@
   let selectedLayers = new Set();
   let loadingStates = new Map();
   let isMenuCollapsed = false;
+  let inscricaoSearchQuery = '';
+  let inscricaoSearchResults = [];
+  let logradouroSearchQuery = '';
+  let logradouroSearchResults = [];
+  let inscricaoData = null; // Will store layer14 data for searching
 
   // Create custom logo control
   const LogoControl = L.Control.extend({
@@ -467,20 +472,92 @@
       return container;
     }
   });
+  
+  // Create location button control
+  const LocationControl = L.Control.extend({
+    onAdd: function(map) {
+      const container = L.DomUtil.create('div', 'location-control');
+      const button = L.DomUtil.create('button', 'location-button', container);
+      button.innerHTML = '📍';
+      button.title = 'Ir para minha localização';
+      
+      button.onclick = () => {
+        if (navigator.geolocation) {
+          button.classList.add('loading');
+          navigator.geolocation.getCurrentPosition(
+            (position) => {
+              const { latitude, longitude } = position.coords;
+              map.setView([latitude, longitude], 16);
+              
+              // Show a marker at user location
+              const userLocationMarker = L.circleMarker([latitude, longitude], {
+                radius: 8,
+                fillColor: '#4285F4',
+                color: '#FFFFFF',
+                weight: 2,
+                opacity: 1,
+                fillOpacity: 1
+              }).addTo(map);
+              
+              // Remove loading state
+              button.classList.remove('loading');
+            },
+            (error) => {
+              console.error('Error getting location:', error);
+              alert('Não foi possível obter sua localização. Verifique se você permitiu o acesso à localização.');
+              button.classList.remove('loading');
+            },
+            { 
+              enableHighAccuracy: true,
+              timeout: 5000,
+              maximumAge: 0
+            }
+          );
+        } else {
+          alert('Seu navegador não suporta geolocalização.');
+        }
+      };
+      
+      // Prevent click events from propagating to the map
+      L.DomEvent.disableClickPropagation(container);
+      return container;
+    }
+  });
 
   onMount(() => {
-    map = L.map('map').setView([-18.7587401,-44.46470720], 12);
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '© OpenStreetMap contributors'
-    }).addTo(map);
+    var satellite = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+      subdomains:['mt0','mt1','mt2','mt3']
+    });
+
+    var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors',
+    });
+
+    map = L.map('map', {layers: [satellite, osm]}).setView([-18.7587401,-44.46470720], 12);
+
+    var baseMaps = {
+      "Satélite": satellite,
+      "OpenStreetMap": osm,
+    };
+
 
     new LogoControl({ position: 'topright' }).addTo(map);
+    new LocationControl({ position: 'bottomright' }).addTo(map);
+    var layerControl = L.control.layers(baseMaps).addTo(map);
+
 
   });
 
   function createLayerGroup(config, geojsonData) {
     switch(config.type) {
+      case 'icon':
+        var schoolIcon = L.icon({
+          iconUrl: '/school-icon.png',
+          iconSize: [32, 37],
+          iconAnchor: [16, 37],
+          popupAnchor: [0, -28]
+        });
       case 'point':
         const markerCluster = L.markerClusterGroup({
           chunkedLoading: true,
@@ -553,6 +630,11 @@
 
       const response = await fetch(config.url);
       const data = await response.json();
+      
+      // If this is the inscricao layer (layer14), store its data for searching
+      if (config.id === 'layer14') {
+        inscricaoData = data;
+      }
 
       const layer = createLayerGroup(config, data);
       
@@ -609,6 +691,102 @@
   function toggleMenu() {
     isMenuCollapsed = !isMenuCollapsed;
   }
+  
+  // Search for inscricao in layer14
+  function searchInscricao() {
+    if (!inscricaoData || !inscricaoSearchQuery.trim()) {
+      inscricaoSearchResults = [];
+      return;
+    }
+    
+    // Normalize the search query (remove spaces, convert to lowercase)
+    const normalizedQuery = inscricaoSearchQuery.trim().toLowerCase().replace(/\s+/g, '');
+    
+    // Search for matching inscricao in features
+    inscricaoSearchResults = inscricaoData.features
+      .filter(feature => {
+        // Check if the feature has properties and inscricao property
+        if (!feature.properties || !feature.properties.Inscricao) return false;
+        
+        // Normalize the inscricao value
+        const inscricao = String(feature.properties.Inscricao).toLowerCase().replace(/\s+/g, '');
+        
+        // Return true if the inscricao includes the search query
+        return inscricao.includes(normalizedQuery);
+      })
+      .slice(0, 5); // Limit to 5 results for performance
+  }
+  
+  // Search for logradouro in layer14
+  function searchLogradouro() {
+    if (!inscricaoData || !logradouroSearchQuery.trim()) {
+      logradouroSearchResults = [];
+      return;
+    }
+    
+    // Normalize the search query (remove spaces, convert to lowercase)
+    const normalizedQuery = logradouroSearchQuery.trim().toLowerCase().replace(/\s+/g, '');
+    
+    // Search for matching logradouro in features
+    logradouroSearchResults = inscricaoData.features
+      .filter(feature => {
+        // Check if the feature has properties and Logradouro property
+        if (!feature.properties || !feature.properties.Logradouro) return false;
+        
+        // Normalize the logradouro value
+        const logradouro = String(feature.properties.Logradouro).toLowerCase().replace(/\s+/g, '');
+        
+        // Return true if the logradouro includes the search query
+        return logradouro.includes(normalizedQuery);
+      })
+      .slice(0, 5); // Limit to 5 results for performance
+  }
+  
+  // Go to the location of a specific feature
+  function goToFeature(feature) {
+    if (!feature || !feature.geometry || !feature.geometry.coordinates) return;
+    
+    // Make sure layer14 is visible
+    if (!selectedLayers.has('layer14')) {
+      // Find layer14 config
+      const layer14Config = layerConfig.find(config => config.id === 'layer14');
+      if (layer14Config) {
+        toggleLayer(layer14Config);
+      }
+    }
+    
+    // For point features, coordinates are [longitude, latitude]
+    const [longitude, latitude] = feature.geometry.coordinates;
+    
+    // Set the view to the coordinates with zoom level 18
+    map.setView([latitude, longitude], 18);
+    
+    // Add a temporary highlight marker
+    const highlightMarker = L.circleMarker([latitude, longitude], {
+      radius: 15,
+      color: '#FF4500',
+      weight: 3,
+      opacity: 1,
+      fillColor: '#FF4500',
+      fillOpacity: 0.3,
+      pulsing: true
+    }).addTo(map);
+    
+    // Create a popup with feature properties
+    const popupContent = formatPopupContent(feature.properties);
+    highlightMarker.bindPopup(popupContent).openPopup();
+    
+    // Remove the highlight marker after 5 seconds
+    setTimeout(() => {
+      map.removeLayer(highlightMarker);
+    }, 5000);
+    
+    // Clear search results
+    inscricaoSearchResults = [];
+    inscricaoSearchQuery = '';
+    logradouroSearchResults = [];
+    logradouroSearchQuery = '';
+  }
 </script>
 
 <style>
@@ -626,6 +804,37 @@
     :global(.logo-image) {
       width: 80px;  /* Smaller on mobile */
     }
+  }
+  
+  :global(.location-button) {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: 2px solid rgba(0,0,0,0.2);
+    border-radius: 4px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  :global(.location-button:hover) {
+    background-color: #f4f4f4;
+  }
+  
+  :global(.location-button.loading) {
+    pointer-events: none;
+    opacity: 0.7;
+    animation: pulse 1.5s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
   }
 
   :global(html, body) {
@@ -817,6 +1026,57 @@
     width: 100%; 
     text-align: center;
   }
+  
+  .search-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 0 10px;
+  }
+  
+  .search-input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .search-results {
+    margin-top: 5px;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .search-result-item {
+    padding: 8px 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .search-result-item:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .search-result-item:last-child {
+    border-bottom: none;
+  }
+  
+  .search-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-icon {
+    margin-right: 5px;
+  }
 </style>
 
 <div class="container">
@@ -826,6 +1086,66 @@
       <div class="curvelo-mapas-logo">
       <img src="/curvelo-mapas.png">
       </div>
+      
+      <!-- Search tools - only visible when layer14 is selected -->
+      {#if selectedLayers.has('layer14')}
+        <!-- Inscricao Search -->
+        <div class="search-container">
+          <div class="search-title">
+            <span class="search-icon">🔍</span> Buscar inscrição cadastral
+          </div>
+          <input 
+            type="text" 
+            class="search-input" 
+            placeholder="Digite a inscrição..." 
+            bind:value={inscricaoSearchQuery}
+            on:input={searchInscricao}
+          />
+          
+          {#if inscricaoSearchResults.length > 0}
+            <div class="search-results">
+              {#each inscricaoSearchResults as result}
+                <div class="search-result-item" on:click={() => goToFeature(result)}>
+                  Inscrição: {result.properties.Inscricao}
+                </div>
+              {/each}
+            </div>
+          {:else if inscricaoSearchQuery.trim() !== '' && inscricaoData}
+            <div class="search-results">
+              <div class="search-result-item">Nenhum resultado encontrado</div>
+            </div>
+          {/if}
+        </div>
+        
+        <!-- Logradouro Search -->
+        <div class="search-container">
+          <div class="search-title">
+            <span class="search-icon">🔍</span> Buscar por logradouro
+          </div>
+          <input 
+            type="text" 
+            class="search-input" 
+            placeholder="Digite o nome da rua..." 
+            bind:value={logradouroSearchQuery}
+            on:input={searchLogradouro}
+          />
+          
+          {#if logradouroSearchResults.length > 0}
+            <div class="search-results">
+              {#each logradouroSearchResults as result}
+                <div class="search-result-item" on:click={() => goToFeature(result)}>
+                  {result.properties.Logradouro}, {result.properties.Num_Imovel || 'S/N'}
+                </div>
+              {/each}
+            </div>
+          {:else if logradouroSearchQuery.trim() !== '' && inscricaoData}
+            <div class="search-results">
+              <div class="search-result-item">Nenhum resultado encontrado</div>
+            </div>
+          {/if}
+        </div>
+      {/if}
+      
       <div class="layers">
       {#each layerGroups as layerGroup}
         <h3 on:click={event => toggleLayerGroup(event)}>{layerGroup['name']} ({layerGroup['layers'].length})</h3>
