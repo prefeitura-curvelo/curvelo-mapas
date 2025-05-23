@@ -39,7 +39,7 @@
     },
     { 
       'name': 'Legislação urbana',
-      'layers': ['layer1', 'layer2', 'layer12']
+      'layers': ['layer1', 'layer2', 'layer12', 'layer29']
     },
     { 
       'name': 'Meio físico',
@@ -439,6 +439,17 @@
          weight: 2,
          pointRadius: 5,
          pointFill: '#ff0000'
+      }
+    },
+    {
+      id: 'layer29',
+      name: 'Zoneamento',
+      type: 'polygon',
+      url: API_URL + '/dataset/cc46306b-0493-43ee-99ab-6e733f31396f/resource/6fd54b96-71c0-4cdf-9db3-6f49c549a793/download/zoneamento.geojson',
+      style: {
+         fillColor: 'rgba(200, 200, 0, 0.2)',
+         color: '#AAAA00',
+         weight: 2,
       }
     },
   ];
