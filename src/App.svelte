@@ -1,5 +1,6 @@
 <script>
   import { onMount } from 'svelte';
+  import curveloLogo from './assets/curvelo-mapas.png';
   import L from 'leaflet';
   import 'leaflet.markercluster';
   import 'leaflet/dist/leaflet.css';
@@ -544,10 +545,12 @@
     });
 
     var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxNativeZoom: 19,
+      maxZoom: 22,
       attribution: '© OpenStreetMap contributors',
     });
 
-    map = L.map('map', {layers: [satellite, osm]}).setView([-18.7587401,-44.46470720], 12);
+    map = L.map('map', {maxNativeZoom: 19, layers: [satellite, osm]}).setView([-18.7587401,-44.46470720], 12);
 
     var baseMaps = {
       "Satélite": satellite,
@@ -1120,7 +1123,7 @@
     <div class="menu-content">
 
       <div class="curvelo-mapas-logo">
-      <img src="/curvelo-mapas.png">
+        <img src={curveloLogo}>
       </div>
       
       <!-- Search tools - only visible when layer14 is selected -->
