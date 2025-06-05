@@ -587,7 +587,7 @@
             if (feature.properties) {
               layer.bindPopup(() => {
                 return formatPopupContent(feature.properties);
-              });
+              }, { maxHeight: 200 });
             }
           }
         }).addTo(markerCluster);
@@ -610,7 +610,7 @@
             if (feature.properties) {
               layer.bindPopup(() => {
                 return formatPopupContent(feature.properties);
-              });
+              }, { maxHeight: 200 });
             }
           }
         }).addTo(pointMarkerCluster);
@@ -625,7 +625,7 @@
             if (feature.properties) {
               layer.bindPopup(() => {
                 return formatPopupContent(feature.properties);
-              });
+              }, { maxHeight: 200 });
             }
 
             // Add hover effect for polygons and lines
@@ -810,12 +810,12 @@
     
     // Create a popup with feature properties
     const popupContent = formatPopupContent(feature.properties);
-    highlightMarker.bindPopup(popupContent).openPopup();
+    highlightMarker.bindPopup(popupContent, { maxHeight: 200 }).openPopup();
     
     // Remove the highlight marker after 5 seconds
-    setTimeout(() => {
-      map.removeLayer(highlightMarker);
-    }, 5000);
+    // setTimeout(() => {
+    //   map.removeLayer(highlightMarker);
+    // }, 5000);
     
     // Clear search results
     inscricaoSearchResults = [];
