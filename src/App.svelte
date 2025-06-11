@@ -540,7 +540,7 @@
 
   onMount(() => {
 
-    var satellite = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+    var satellite = L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}', {
       maxNativeZoom: 22,
       maxZoom: 22,
       subdomains:['mt0','mt1','mt2','mt3']
