@@ -452,7 +452,7 @@
       type: 'polygon',
       url: API_URL + '/dataset/cc46306b-0493-43ee-99ab-6e733f31396f/resource/9e0888a3-f4ee-4c18-8bc7-47c5a8c5d6d8/download/ade_br_135.geojson',
       style: {
-         fillColor: 'rgba(200, 200, 0, 0.2)',
+         fillColor: 'rgba(255, 182, 23, 0.2)',
          color: '#FFB617',
          weight: 2,
       }
@@ -463,7 +463,7 @@
       type: 'polygon',
       url: API_URL + '/dataset/cc46306b-0493-43ee-99ab-6e733f31396f/resource/434ab3ea-7a95-4892-9413-6977c5b71209/download/ade_c.geojson',
       style: {
-         fillColor: 'rgba(200, 200, 0, 0.2)',
+         fillColor: 'rgba(131, 32, 238, 0.2)',
          color: '#8320EE',
          weight: 2,
       }
@@ -474,7 +474,7 @@
       type: 'polygon',
       url: API_URL + '/dataset/cc46306b-0493-43ee-99ab-6e733f31396f/resource/aab7187e-044c-4770-bc29-a64b1360e7e1/download/ade_centra.geojson',
       style: {
-         fillColor: 'rgba(200, 200, 0, 0.2)',
+         fillColor: 'rgba(0, 0, 255, 0.2)',
          color: '#0000FF',
          weight: 2,
       }
@@ -485,7 +485,7 @@
       type: 'polygon',
       url: API_URL + '/dataset/cc46306b-0493-43ee-99ab-6e733f31396f/resource/d7c375a3-b75e-4f09-b1af-d8f8c50e4f3c/download/ade_v.geojson',
       style: {
-         fillColor: 'rgba(200, 200, 0, 0.2)',
+         fillColor: 'rgba(255, 128, 128, 0.2)',
          color: '#FF8080',
          weight: 2,
       }
