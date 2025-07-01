@@ -617,7 +617,7 @@
       type: 'polygon',
       url: API_URL + '/dataset/cc46306b-0493-43ee-99ab-6e733f31396f/resource/c1e4b0b6-8f0d-4886-9306-c7c96469eca5/download/zeis_ii.geojson',
       style: {
-         fillColor: 'rgba(200, 200, 0, 0.2)',
+         fillColor: 'rgba(27, 116, 184, 0.2)',
          color: '#1B74B8',
          weight: 2,
       }
