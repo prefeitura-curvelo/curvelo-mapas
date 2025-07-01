@@ -584,7 +584,7 @@
       type: 'polygon',
       url: API_URL + '/dataset/cc46306b-0493-43ee-99ab-6e733f31396f/resource/2343bd78-9252-40a2-921a-444686ce57d9/download/zr.geojson',
       style: {
-         fillColor: 'rgba(200, 200, 0, 0.2)',
+         fillColor: 'rgba(183, 234, 181, 0.2)',
          color: '#B7EAB5',
          weight: 2,
       }
