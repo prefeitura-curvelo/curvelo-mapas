@@ -310,11 +310,11 @@
 
       url: API_URL + '/dataset/1aa76d64-bf9e-41b3-bed4-1047533fff24/resource/8ce2a816-b319-4301-b114-9f51277188b8/download/area_institucional_loteamentos.geojson',
       style: {
-         fillColor: 'rgba(255, 0, 0, 0.2)',
-         color: '#ff0000',
+         fillColor: 'rgba(193,9,230, 0.2)',
+         color: '#c109e6',
          weight: 2,
          pointRadius: 5,
-         pointFill: '#ff0000'
+         pointFill: '#c109e6'
       }
     },
     {
