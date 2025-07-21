@@ -139,11 +139,11 @@
 
       url: API_URL + '/dataset/a8d71a59-b211-4e43-ba3d-05336891ba3b/resource/4be28723-e4be-4e23-90e5-2ce155104f9a/download/area_verde_loteamentos.geojson',
       style: {
-         color: '#0088FF',
+         color: '#187820',
          weight: 1,
          pointRadius: 2,
          radius: 5,
-         pointFill: '#00DDDD'
+         pointFill: '#187820'
       }
     },
     {
@@ -254,11 +254,11 @@
 
       url: API_URL + '/dataset/2cf4267d-be96-465a-af0a-a0ce5de9d485/resource/29a01453-46f7-40b6-b67a-ebb2b4b4d249/download/bairros.geojson',
       style: {
-         fillColor: 'rgba(255, 0, 0, 0.2)',
-         color: '#ff0000',
+         fillColor: 'rgba(230,215,9, 0.2)',
+         color: '#e6d709',
          weight: 2,
          pointRadius: 5,
-         pointFill: '#ff0000'
+         pointFill: '#e6d709'
       }
     },
     {
@@ -385,11 +385,11 @@
 
       url: API_URL + '/dataset/7a0c3f0e-6008-4f87-9276-b0cfc4fff7e6/resource/cacfc1a8-6b2a-4887-ab5d-226c0e8c5b0c/download/conjuntos_habitacionais.geojson',
       style: {
-         fillColor: 'rgba(255, 0, 0, 0.2)',
-         color: '#ff0000',
+         fillColor: 'rgba(17,21,255, 0.2)',
+         color: '#1115ff',
          weight: 2,
          pointRadius: 5,
-         pointFill: '#ff0000'
+         pointFill: '#1115ff'
       }
     },
     {
@@ -441,11 +441,11 @@
 
       url: API_URL + '/dataset/fb1c5351-4e0f-4e85-a475-3b168d18d1e7/resource/09bd2f53-35d2-4a1f-a0c8-b15a7f60cd15/download/reurb.geojson',
       style: {
-         fillColor: 'rgba(255, 0, 0, 0.2)',
-         color: '#ff0000',
+         fillColor: 'rgba(255,96,17, 0.2)',
+         color: '#ff6011',
          weight: 2,
          pointRadius: 5,
-         pointFill: '#ff0000'
+         pointFill: '#ff6011'
       }
     },
 // Zoneamento layer
