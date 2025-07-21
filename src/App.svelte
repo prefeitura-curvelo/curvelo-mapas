@@ -364,7 +364,7 @@
       id: 'layer23',
       name: 'Postos de saúde',
       type: 'icon',
-      iconUrl: '/assets/health-icon.svg',
+      iconUrl: '/assets/20.png',
       iconSize: [32, 32],
       url: API_URL + '/dataset/e05e3dfb-fb0a-4568-bb33-3737b9f65a23/resource/85acb4b0-9deb-4190-9afb-6b03d8aa967f/download/pontos_saude.geojson',
       style: {
