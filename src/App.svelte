@@ -282,11 +282,11 @@
 
       url: API_URL + '/dataset/fa8cbd9c-bfdf-44e6-b220-2f008c0d127b/resource/266fa1e1-fb06-4c3a-b25b-1b269551dabb/download/app.geojson',
       style: {
-         fillColor: 'rgba(255, 0, 0, 0.2)',
-         color: '#ff0000',
+         fillColor: 'rgba(9,230,28, 0.2)',
+         color: '#09e61c',
          weight: 2,
          pointRadius: 5,
-         pointFill: '#ff0000'
+         pointFill: '#09e61c'
       }
     },
     {
@@ -351,8 +351,9 @@
     {
       id: 'layer22',
       name: 'Assistência social administração',
-      type: 'point',
-
+      type: 'icon',
+      iconUrl: '/assets/19.png',
+      iconSize: [32, 32],
       url: API_URL + '/dataset/c4ff27f8-dc82-475c-866a-d75e20837957/resource/d0b6741e-a6ae-425b-801c-b6361997c642/download/assistencia_social_administracao.geojson',
       style: {
          fillColor: 'rgba(255, 0, 0, 0.2)',
