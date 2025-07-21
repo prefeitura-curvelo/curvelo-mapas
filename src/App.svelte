@@ -730,7 +730,6 @@
          weight: 2,
       }
     },
-// teste
     {
       id: 'layer90',
       name: 'Clubes Recreativos e de Lazer',
