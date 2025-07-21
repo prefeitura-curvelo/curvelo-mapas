@@ -426,7 +426,7 @@
 
       url: API_URL + '/dataset/62c8eb86-b286-4819-91c9-48febfb1729c/resource/dd1eb84e-dbec-4995-8504-d6e344dc656c/download/loteamento.geojson',
       style: {
-         fillColor: 'rgba(255, 0, 0, 0.2)',
+         fillColor: 'rgba(9,230,230, 0.2)',
          color: '#09e6e6',
          weight: 2,
          pointRadius: 5,
