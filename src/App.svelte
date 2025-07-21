@@ -44,7 +44,7 @@
     },
     { 
       'name': 'Meio físico',
-      'layers': ['layer7', 'layer105']
+      'layers': ['layer7', 'layer104']
     },
     { 
       'name': 'Zoneamento',
