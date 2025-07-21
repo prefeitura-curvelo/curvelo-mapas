@@ -46,9 +46,13 @@
       'name': 'Meio físico',
       'layers': ['layer7']
     },
-        { 
+    { 
       'name': 'Zoneamento',
       'layers': ['layer40', 'layer41', 'layer42', 'layer43', 'layer44', 'layer45', 'layer46', 'layer47', 'layer48', 'layer49', 'layer50', 'layer51', 'layer52', 'layer53', 'layer54', 'layer55']
+    },
+    {
+      'name': 'Transporte Público',
+      'layers': ['layer70', 'layer71', 'layer72', 'layer73', 'layer74', 'layer75', 'layer76', 'layer77', 'layer78', 'layer79']
     }
   ]
   
@@ -463,7 +467,6 @@
          pointFill: '#ff0000'
       }
     },
-// Zoneamento layer
     {
       id: 'layer40',
       name: 'ADE - 135',
@@ -637,6 +640,116 @@
       style: {
          fillColor: 'rgba(27, 116, 184, 0.2)',
          color: '#1B74B8',
+         weight: 2,
+      }
+    },
+    {
+      id: 'layer70',
+      name: 'Linha 808 – Guimarães Rosa / Bela Vista',
+      type: 'polygon',
+      url: API_URL + '/dataset/6ac14626-5205-47c3-9d56-353d5bf9c916/resource/cff64aac-9254-4d2f-bf91-52d73eb8d3cb/download/linha_808.geojson',
+      style: {
+         fillColor: 'rgba(255,96,17, 0.2)',
+         color: '#ff6011',
+         weight: 2,
+      }
+    },
+    {
+      id: 'layer71',
+      name: 'Linha 707 – Ipiranga / Ponte Nova / Esperança',
+      type: 'polygon',
+      url: API_URL + '/dataset/6ac14626-5205-47c3-9d56-353d5bf9c916/resource/49f542eb-6ef5-4bf1-bddc-85f4b01904a0/download/linha_707.geojson',
+      style: {
+         fillColor: 'rgba(255,96,17, 0.2)',
+         color: '#ff6011',
+         weight: 2,
+      }
+    },
+    {
+      id: 'layer72',
+      name: 'Linha 606 – Ipiranga / Maria Amália',
+      type: 'polygon',
+      url: API_URL + '/dataset/6ac14626-5205-47c3-9d56-353d5bf9c916/resource/b28fee7b-0bc9-47eb-9f4f-31ab59f1d44b/download/linha_606.geojson',
+      style: {
+         fillColor: 'rgba(255,96,17, 0.2)',
+         color: '#ff6011',
+         weight: 2,
+      }
+    },
+    {
+      id: 'layer73',
+      name: 'Linha 505 – Santa Rita / Jardim Paraíso (Via CEFET)',
+      type: 'polygon',
+      url: API_URL + '/dataset/6ac14626-5205-47c3-9d56-353d5bf9c916/resource/8a6fc5bc-a6ec-4695-9231-61aa415b572c/download/linha_505.geojson',
+      style: {
+         fillColor: 'rgba(255,96,17, 0.2)',
+         color: '#ff6011',
+         weight: 2,
+      }
+    },
+    {
+      id: 'layer74',
+      name: 'Linha 404B – Bom Jesus / Residencial Lourdes',
+      type: 'polygon',
+      url: API_URL + '/dataset/6ac14626-5205-47c3-9d56-353d5bf9c916/resource/ffcac2f5-0dfd-4c27-86dd-9ccdfaa3ee50/download/linha_404b.geojson',
+      style: {
+         fillColor: 'rgba(255,96,17, 0.2)',
+         color: '#ff6011',
+         weight: 2,
+      }
+    },
+    {
+      id: 'layer75',
+      name: 'Linha 404A – Bom Jesus / Residencial Lourdes (Via Denise II)',
+      type: 'polygon',
+      url: API_URL + '/dataset/6ac14626-5205-47c3-9d56-353d5bf9c916/resource/fd04298b-4a83-4b54-b643-7373c5191cce/download/linha_404a.geojson',
+      style: {
+         fillColor: 'rgba(255,96,17, 0.2)',
+         color: '#ff6011',
+         weight: 2,
+      }
+    },
+    {
+      id: 'layer76',
+      name: 'Linha 303B – Lúcio Cardoso / Centro',
+      type: 'polygon',
+      url: API_URL + '/dataset/6ac14626-5205-47c3-9d56-353d5bf9c916/resource/7f107f71-8c15-49f1-aa04-04a2f3123bba/download/linha_303b.geojson',
+      style: {
+         fillColor: 'rgba(255,96,17, 0.2)',
+         color: '#ff6011',
+         weight: 2,
+      }
+    },
+    {
+      id: 'layer77',
+      name: 'Linha 303A – Lúcio Cardoso / Centro (Via Açucena)',
+      type: 'polygon',
+      url: API_URL + '/dataset/6ac14626-5205-47c3-9d56-353d5bf9c916/resource/321d201a-a2d5-484e-89c5-53b62a3eb8fa/download/linha_303a.geojson',
+      style: {
+         fillColor: 'rgba(255,96,17, 0.2)',
+         color: '#ff6011',
+         weight: 2,
+      }
+    },
+    {
+      id: 'layer78',
+      name: 'Linha 202 – Ponte Nova / Vale dos Pinheiros',
+      type: 'polygon',
+      url: API_URL + '/dataset/6ac14626-5205-47c3-9d56-353d5bf9c916/resource/16bb4728-9573-4239-ab5d-91655fffd559/download/linha_202.geojson',
+      style: {
+         fillColor: 'rgba(255,96,17, 0.2)',
+         color: '#ff6011',
+         weight: 2,
+      }
+    },
+    {
+      id: 'layer79',
+      name: 'Linha 101 – Cidade Nova / Centro (Via Hospital Imaculada)',
+      type: 'polygon',
+      url: API_URL + '/dataset/6ac14626-5205-47c3-9d56-353d5bf9c916/resource/bc8169e6-6b0d-43e0-9f3d-cd41058733bb/download/linha_101.geojson',
+      style: {
+         fillColor: 'rgba(255,96,17, 0.2)',
+         color: '#ff6011',
          weight: 2,
       }
     },
