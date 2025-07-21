@@ -24,7 +24,7 @@
     },
     {
       'name': 'Informações imobiliárias',
-      'layers': ['layer6', 'layer10', 'layer13', 'layer14', 'layer15', 'layer16', 'layer17', 'layer18', 'layer19']
+      'layers': ['layer6', 'layer10', 'layer13', 'layer14', 'layer15', 'layer16', 'layer17', 'layer18', 'layer19', 'layer29']
     },
     {
       'name': 'Licenciamento',
@@ -446,6 +446,21 @@
          weight: 2,
          pointRadius: 5,
          pointFill: '#ff6011'
+      }
+    },
+    {
+      id: 'layer29',
+      name: 'Bens Tombados – Exercício 2025',
+      type: 'icon',
+      iconUrl: '/assets/0.png',
+      iconSize: [32, 32],
+      url: API_URL + '/dataset/97fab261-3895-482d-b310-49e4475845c3/resource/3bf03c35-b204-45f7-b861-dcb6a833ee91/download/bens_tombados-exercicio-2025.geojson',
+      style: {
+         fillColor: 'rgba(255, 0, 0, 0.2)',
+         color: '#ff0000',
+         weight: 2,
+         pointRadius: 5,
+         pointFill: '#ff0000'
       }
     },
 // Zoneamento layer
