@@ -335,7 +335,7 @@
       id: 'layer21',
       name: 'Escolas',
       type: 'icon',
-      iconUrl: '/assets/school-icon.png',
+      iconUrl: '/assets/18.png',
       iconSize: [32, 32],
       url: API_URL + '/dataset/0426cfca-22ec-4f79-ad30-d52cd2b785d2/resource/0345399c-8b61-4753-9973-84ac1079f94c/download/escolas.geojson',
       style: {
