@@ -320,7 +320,9 @@
     {
       id: 'layer20',
       name: 'Educação',
-      type: 'point',
+      type: 'icon',
+      iconUrl: '/assets/18.png',
+      iconSize: [32, 32],
 
       url: API_URL + '/dataset/f5ea0755-f60b-45c7-9331-496700acb2a9/resource/f8222461-79a5-436d-8b56-62f3751e10c7/download/educacao.geojson',
       style: {
