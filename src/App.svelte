@@ -16,7 +16,7 @@
     },
     {
       'name': 'Equipamentos',
-      'layers': ['layer20', 'layer21', 'layer22', 'layer23', 'layer90', 'layer91', 'layer92', 'layer93', 'layer94', 'layer95', 'layer96', 'layer97', 'layer98', 'layer99', 'layer100', 'layer101', 'layer102', 'layer103', 'layer105']
+      'layers': ['layer20', 'layer21', 'layer22', 'layer23', 'layer90', 'layer91', 'layer92', 'layer93', 'layer94', 'layer95', 'layer96', 'layer97', 'layer98', 'layer99', 'layer100', 'layer101', 'layer102', 'layer103', 'layer105', 'layer106']
     },
     {
       'name': 'Habitação',
@@ -962,6 +962,21 @@
       iconUrl: '/assets/17.png',
       iconSize: [32, 32],
       url: API_URL + '/dataset/b2169e87-12ac-4eab-a316-9569231d3689/resource/0aff9161-9026-4ce6-b080-b45de84108c8/download/campos-de-futebol-2025.geojson',
+      style: {
+         fillColor: 'rgba(255, 0, 0, 0.2)',
+         color: '#ff0000',
+         weight: 2,
+         pointRadius: 5,
+         pointFill: '#ff0000'
+      }
+    },
+    {
+      id: 'layer106',
+      name: 'Relação das praças públicas do município',
+      type: 'icon',
+      iconUrl: '/assets/21.png',
+      iconSize: [32, 32],
+      url: API_URL + '/dataset/eeefc295-4a9f-4521-885e-640c4dba8f57/resource/f5119e46-c961-45c0-a76c-087d704d7af1/download/pracas-publicas-2025.geojson',
       style: {
          fillColor: 'rgba(255, 0, 0, 0.2)',
          color: '#ff0000',
