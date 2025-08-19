@@ -637,8 +637,8 @@
       type: 'polygon',
       url: API_URL + '/dataset/6ac14626-5205-47c3-9d56-353d5bf9c916/resource/49f542eb-6ef5-4bf1-bddc-85f4b01904a0/download/linha_707.geojson',
       style: {
-         fillColor: 'rgba(255,96,17, 0.2)',
-         color: '#ff6011',
+         fillColor: 'rgba(255, 37, 17, 0.2)',
+         color: '#ff2511',
          weight: 2,
       }
     },
