@@ -648,8 +648,8 @@
       type: 'polygon',
       url: API_URL + '/dataset/6ac14626-5205-47c3-9d56-353d5bf9c916/resource/b28fee7b-0bc9-47eb-9f4f-31ab59f1d44b/download/linha_606.geojson',
       style: {
-         fillColor: 'rgba(255,96,17, 0.2)',
-         color: '#ff6011',
+         fillColor: 'rgba(252, 232, 5, 0.2)',
+         color: '#fce805',
          weight: 2,
       }
     },
@@ -659,8 +659,8 @@
       type: 'polygon',
       url: API_URL + '/dataset/6ac14626-5205-47c3-9d56-353d5bf9c916/resource/8a6fc5bc-a6ec-4695-9231-61aa415b572c/download/linha_505.geojson',
       style: {
-         fillColor: 'rgba(255,96,17, 0.2)',
-         color: '#ff6011',
+         fillColor: 'rgba(129, 252, 5, 0.2)',
+         color: '#81fc05',
          weight: 2,
       }
     },
@@ -670,8 +670,8 @@
       type: 'polygon',
       url: API_URL + '/dataset/6ac14626-5205-47c3-9d56-353d5bf9c916/resource/ffcac2f5-0dfd-4c27-86dd-9ccdfaa3ee50/download/linha_404b.geojson',
       style: {
-         fillColor: 'rgba(255,96,17, 0.2)',
-         color: '#ff6011',
+         fillColor: 'rgba(25, 250, 216, 0.2)',
+         color: '#19fad8',
          weight: 2,
       }
     },
@@ -681,8 +681,8 @@
       type: 'polygon',
       url: API_URL + '/dataset/6ac14626-5205-47c3-9d56-353d5bf9c916/resource/fd04298b-4a83-4b54-b643-7373c5191cce/download/linha_404a.geojson',
       style: {
-         fillColor: 'rgba(255,96,17, 0.2)',
-         color: '#ff6011',
+         fillColor: 'rgba(25, 48, 250, 0.2)',
+         color: '#1930fa',
          weight: 2,
       }
     },
@@ -692,8 +692,8 @@
       type: 'polygon',
       url: API_URL + '/dataset/6ac14626-5205-47c3-9d56-353d5bf9c916/resource/7f107f71-8c15-49f1-aa04-04a2f3123bba/download/linha_303b.geojson',
       style: {
-         fillColor: 'rgba(255,96,17, 0.2)',
-         color: '#ff6011',
+         fillColor: 'rgba(115, 23, 227, 0.2)',
+         color: '#7317e3',
          weight: 2,
       }
     },
@@ -703,8 +703,8 @@
       type: 'polygon',
       url: API_URL + '/dataset/6ac14626-5205-47c3-9d56-353d5bf9c916/resource/321d201a-a2d5-484e-89c5-53b62a3eb8fa/download/linha_303a.geojson',
       style: {
-         fillColor: 'rgba(255,96,17, 0.2)',
-         color: '#ff6011',
+         fillColor: 'rgba(234, 54, 247, 0.2)',
+         color: '#ea36f7',
          weight: 2,
       }
     },
@@ -714,8 +714,8 @@
       type: 'polygon',
       url: API_URL + '/dataset/6ac14626-5205-47c3-9d56-353d5bf9c916/resource/16bb4728-9573-4239-ab5d-91655fffd559/download/linha_202.geojson',
       style: {
-         fillColor: 'rgba(255,96,17, 0.2)',
-         color: '#ff6011',
+         fillColor: 'rgba(20, 102, 68, 0.2)',
+         color: '#146644',
          weight: 2,
       }
     },
@@ -725,8 +725,8 @@
       type: 'polygon',
       url: API_URL + '/dataset/6ac14626-5205-47c3-9d56-353d5bf9c916/resource/bc8169e6-6b0d-43e0-9f3d-cd41058733bb/download/linha_101.geojson',
       style: {
-         fillColor: 'rgba(255,96,17, 0.2)',
-         color: '#ff6011',
+         fillColor: 'rgba(46, 21, 17, 0.2)',
+         color: '#2e1511',
          weight: 2,
       }
     },
