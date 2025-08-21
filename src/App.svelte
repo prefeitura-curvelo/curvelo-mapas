@@ -714,8 +714,8 @@
       type: 'polygon',
       url: API_URL + '/dataset/6ac14626-5205-47c3-9d56-353d5bf9c916/resource/16bb4728-9573-4239-ab5d-91655fffd559/download/linha_202.geojson',
       style: {
-         fillColor: 'rgba(20, 102, 68, 0.2)',
-         color: '#146644',
+         fillColor: 'rgba(245, 157, 233, 0.2)',
+         color: '#f59de9',
          weight: 2,
       }
     },
