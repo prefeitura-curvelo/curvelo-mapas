@@ -53,6 +53,10 @@
     {
       'name': 'Transporte Público',
       'layers': ['layer70', 'layer71', 'layer72', 'layer73', 'layer74', 'layer75', 'layer76', 'layer77', 'layer78', 'layer79']
+    },
+    {
+      'name': 'Loteamentos em aprovação',
+      'layers': ['layer151', 'layer152', 'layer153', 'layer154']
     }
   ]
   
@@ -977,6 +981,66 @@
       iconUrl: '/assets/21.png',
       iconSize: [32, 32],
       url: API_URL + '/dataset/eeefc295-4a9f-4521-885e-640c4dba8f57/resource/f5119e46-c961-45c0-a76c-087d704d7af1/download/pracas-publicas-2025.geojson',
+      style: {
+         fillColor: 'rgba(255, 0, 0, 0.2)',
+         color: '#ff0000',
+         weight: 2,
+         pointRadius: 5,
+         pointFill: '#ff0000'
+      }
+    },
+    {
+      id: 'layer151',
+      name: 'Emissão de Diretrizes',
+      type: 'icon',
+      iconUrl: '/assets/22.png',
+      iconSize: [32, 32],
+      url: API_URL + '/dataset/33e6cf09-bb1f-4a06-97bf-25aeb2eff588/resource/28786566-a6a3-4ab6-8f94-82f6a18af9e7/download/emissaodediretrizes.geojson',
+      style: {
+         fillColor: 'rgba(255, 0, 0, 0.2)',
+         color: '#ff0000',
+         weight: 2,
+         pointRadius: 5,
+         pointFill: '#ff0000'
+      }
+    },
+    {
+      id: 'layer152',
+      name: 'Análise de anteprojeto',
+      type: 'icon',
+      iconUrl: '/assets/23.png',
+      iconSize: [32, 32],
+      url: API_URL + '/dataset/33e6cf09-bb1f-4a06-97bf-25aeb2eff588/resource/b1f326ef-b427-4128-8e88-04c7f318adef/download/analiseanteprojeto.geojson',
+      style: {
+         fillColor: 'rgba(255, 0, 0, 0.2)',
+         color: '#ff0000',
+         weight: 2,
+         pointRadius: 5,
+         pointFill: '#ff0000'
+      }
+    },
+    {
+      id: 'layer153',
+      name: 'Aprovação do projeto',
+      type: 'icon',
+      iconUrl: '/assets/24.png',
+      iconSize: [32, 32],
+      url: API_URL + '/dataset/33e6cf09-bb1f-4a06-97bf-25aeb2eff588/resource/8f6e1f2a-b86e-49d2-b64e-e5e68a21a459/download/aprovdoprojeto.geojson',
+      style: {
+         fillColor: 'rgba(255, 0, 0, 0.2)',
+         color: '#ff0000',
+         weight: 2,
+         pointRadius: 5,
+         pointFill: '#ff0000'
+      }
+    },
+    {
+      id: 'layer154',
+      name: 'Em implantação',
+      type: 'icon',
+      iconUrl: '/assets/25.png',
+      iconSize: [32, 32],
+      url: API_URL + '/dataset/33e6cf09-bb1f-4a06-97bf-25aeb2eff588/resource/346a6c72-7c8a-4f4b-9518-8332869530c9/download/implantacao.geojson',
       style: {
          fillColor: 'rgba(255, 0, 0, 0.2)',
          color: '#ff0000',
